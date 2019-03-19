@@ -1,0 +1,24 @@
+{
+  "name": "rem",
+  "version": "1.0.0",
+  "description": "this is a mobile rem",
+  "main": "index.js",
+  "scripts": {
+    "test": "rem test"
+  },
+  "author": "Dsj",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "body-parser": "^1.18.3",
+    "css-loader": "^2.1.1",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0"
+  }
+}

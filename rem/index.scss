@@ -1,0 +1,95 @@
+@function px2rem($px){
+	$rem: 37.5px;		//用的是iphone6的视觉稿,375/10
+	@return ($px / $rem) + rem;
+}
+html{
+	background-color: #f8f8f8;
+}
+//因为设计稿要比实际的尺寸大一倍，所有除以2
+.header{
+	height: px2rem(40px);//除以2
+	width: 100%;
+	background-color: red;
+	padding-left: px2rem(23px);//除以2
+	.header-item{
+		float: left;
+		color: #ffcdce;
+		font-size: px2rem(16px);//除以2
+		margin-right: px2rem(20px);//除以2
+		line-height: px2rem(40px);//居中
+		&:nth-child(2){
+			color: #fff;
+			font-size: px2rem(17px);
+		}
+	}
+}
+.banner-content{
+	position: relative;
+	.banner{
+		display: block;
+		width: 100%;
+		height: px2rem(200px);//除以2
+	}
+	.banner-title{
+		position: absolute;
+		left: px2rem(15px);//除以2
+		bottom: px2rem(15px);//除以2
+		font-size: px2rem(16px);//除以2
+		color: #fff;
+	}
+}
+.news-content{
+	.news-item{
+		width: 100%;
+		height: px2rem(120px);//除以2
+		padding-left: px2rem(15px);//除以2
+		padding-right: px2rem(15px);//除以2
+		box-sizing: border-box;
+	}
+	.item-inner{
+		position: relative;
+		overflow: hidden;
+		height: 100%;
+		border-bottom: px2rem(1px) solid #e5e5e5;
+	}
+	.news-img{
+		float: left;
+		display: block;
+		margin-top: px2rem(10px);
+		width: px2rem(110px);
+		height: px2rem(95px);
+		margin-right: px2rem(15px);
+	}
+	.news-title{
+		color: #404040;
+		font-size: px2rem(17px);//除以2
+		margin-top: px2rem(16px);//除以2
+		line-height: px2rem(30px);
+	}
+	.time{
+		position: absolute;
+		left: px2rem(120px);
+		bottom: px2rem(17px);//除以2
+		font-size: px2rem(10px);
+		color: #888;
+	}
+	.num{
+		position: absolute;
+		color: #888;
+		font-size: px2rem(12px);
+		right: px2rem(4px);
+		bottom: px2rem(17px);
+		//下面这种写法，解决，当数字很多位的时候
+		&:before{
+			content: ' ';
+			display: block;
+			position: absolute;
+			width: px2rem(21px);//除以2
+			height: px2rem(20px);//除以2
+			background-size: contain;
+			top: px2rem(6px);
+			left: px2rem(-23px);
+			background-image: url(img/read-icon.jpg);
+		}
+	}
+}
